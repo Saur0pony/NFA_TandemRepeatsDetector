@@ -315,6 +315,7 @@ def get_arguments():
     k = 2  # define k standard value to 2
     gap = 0
     cutpat = True
+    cutlength = 10000000
 
     try:
         options, _ = getopt.getopt(
@@ -337,8 +338,10 @@ def get_arguments():
             gap = int(arg)
         elif opt in "--cutpat":
             cutpat = False
+        elif opt in "--cutlen":
+            cutlength = int(arg)
 
-    return file_name, output_name, pattern, k, gap, cutpat
+    return file_name, output_name, pattern, k, gap, cutpat, cutlength
 
 
 def main():
@@ -346,7 +349,7 @@ def main():
     start_time = time.time()
 
     #get arguments
-    file_name, output_name, pattern, k, gap, cutpat = get_arguments()
+    file_name, output_name, pattern, k, gap, cutpat, cutlength = get_arguments()
 
 
     if gap != None:
@@ -371,7 +374,7 @@ def main():
                     read_seq = True
                 elif read_seq:
                     #list_pos = pattern_search(pattern, line.rstrip() + extend, k, gap, cutpat)
-                    list_pos = multi_process_cut(pattern, line.rstrip() + extend, k, gap, cutpat, 10000000)
+                    list_pos = multi_process_cut(pattern, line.rstrip() + extend, k, gap, cutpat, cutlength)
                     output.write(f'>{id_seq}\n>Length:\t{len(line.rstrip())}\n>Bloc_found:\t{len(list_pos)}\n>Execution_time:\t{round(time.time() - start_time,2)}\n')
                     output.write(f'>start\tend\tcopies\tlength\tpositions\n')
                     nb_copy = 0
