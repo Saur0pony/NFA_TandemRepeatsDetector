@@ -1,7 +1,10 @@
-# NFA Tandem Repeat Detector v5
+# NFA Tandem Repeat Detector v5 + MaxRepv3
 
 This is the fifth version of ppatern matching which use NFA algorythm to find occurences of a tandem repeat pattern in a DNA sequence.
-Algorithm come from Baeza-Yates and was improved by Keikki Hyyrö and rewrite in python by Grégoire Prunier to be use in case of Tandem Repeat
+Algorithm come from Baeza-Yates and was improved by Keikki Hyyrö and rewrite in python by Grégoire Prunier to be use in case of Tandem Repeat.
+It can be use to find Tandem repeats or CRISPR with addition of gap.
+
+MaxRepv3 is a programme which can be use to find maximal repeat to help te get some motif to test with Tandem Repeat Detector
 
 ## Note about the version
 
@@ -79,3 +82,4 @@ It take a k value of maximal error allowed in 1 pattern.
 
 * Baeza-Yates, Navarro 1996
 * Heikki Hyrrô 2006 and 2008
+*
