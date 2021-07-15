@@ -28,17 +28,20 @@ The run.sh is used to find TR of a pattern gived in argument, in a simple fasta 
 This algorithm need python 3  (tested with python 3.8.5)
 for use with pypy like with the run.sh, the package pypy is mandatory, and must be in stable version of python (python 3.7.9)
 
-Packages required :
+Packages required for TR Detector:
 
 * multiprocessing
 * getopt
 * sys
 * threading
 
+Package required for MaxRep:
 
+* Sufarray-kkto
+* Numpy
 
-## Use the algorithm
-
+## Use the algorithms
+### Tandem Repeat Detector
 The program simply need to launch the python script and enter different arguments.
 
 * `--file` : Input sequence file (can contain multiple sequence). It need to be in Fasta format.
@@ -51,7 +54,9 @@ example of execution command line :
 ```
 python pattern_matching_NFA.py --file sequences.fa --out result.txt --pattern TGT --k 1
 ```
-## Use the algorithm with run.sh
+### Use the algorithm Tandem repeat detector with run.sh
+This method need to have pypy package.
+
 Arguments are simplier to enter :
 
 - `-f = --file`
@@ -65,6 +70,18 @@ example of execution command line :
 ```
 ./run.sh -f Human_genome.fna -p GTGTCCCCGCGCCAGC -k 5 -o result.txt
 ```
+### MaxRep
+
+Simply need to launch python script with different arguments :
+
+* `--file` : Input sequence file (can contain multiple sequence). It need to be in Fasta format.
+* `--out` : The output name where are store results and informations about argument uses.
+* `--ml` : Minimal length of maximal repeats
+
+example of execution command line :
+```
+python --file Human_genome.fna --out output.out --ml 20
+```
 
 ## Versioning
 
@@ -75,11 +92,11 @@ It take a k value of maximal error allowed in 1 pattern.
 ## Authors
 
 * **Grégoire Prunier** 
-
+* **Jacques Nicolas**
 
 
 ## Acknowledgments
 
 * Baeza-Yates, Navarro 1996
 * Heikki Hyrrô 2006 and 2008
-*
+* Becher, Deymonnaz, Ariel Heber 2012
