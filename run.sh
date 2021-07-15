@@ -71,7 +71,7 @@ fi
 
 
 # Compute python command to run script
-command="pypy ~/Pattern_matching_NFA/NFA_Tandem_repeat_detector_v5/NFA_TandermRepeat_detector_v5.py --file GENOME_FILE --pattern $pattern_arg --out OUTPUT"
+command="pypy ./NFA_TandermRepeat_detector_v5.py --file GENOME_FILE --pattern $pattern_arg --out OUTPUT"
 
 if [ $k_arg ]
 then
