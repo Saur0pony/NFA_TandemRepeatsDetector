@@ -40,6 +40,13 @@ Package required for MaxRep:
 * Sufarray-kkto
 * Numpy
 
+Sequences must be in one line.
+To do that, use "onelinedfasta.py" script.
+```
+python onelinedfasta.py --file downloadedsequence.fasta --out sequence_onelined.fasta
+```
+
+
 ## Use the algorithms
 ### Tandem Repeat Detector
 The program simply need to launch the python script and enter different arguments.
