@@ -1,0 +1,12 @@
+Pattern matching by using NFA algorithme : NFA pattern matching v4 - for spacer vectors
+Sequence file name : ./tmp_genome_part_0000
+Pattern : GCTGGAGAGCAACCGTAGGCCGGATAAGATGCGCCAGCATNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNGCTGGAGAGCAACCGTAGGCCGGATAAGATGCGCCAGCATNNNNNNNNNNNNNNNNNNNN
+k = 20
+>NZ_CP007391.1 Escherichia coli strain ST540 chromosome, complete genome
+Length:	4875682
+Bloc_found:	1
+Execution_time:	9.85
+start	end	copies	length	positions
+3964496	3965147	8	651	[3964626, 3964709, 3964797, 3964878, 3964960, 3965065, 3965147]
+Global :
+3964496	3965147	8	651
