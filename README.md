@@ -1,34 +1,34 @@
 # NFA Tandem Repeat Detector v5 + MaxRepv3
 
-This is the fifth version of ppatern matching which use NFA algorythm to find occurences of a tandem repeat pattern in a DNA sequence.
+This is the fifth version of pattern matching which use NFA algorithm to find occurrences of a tandem repeat pattern in a DNA sequence.
 Algorithm come from Baeza-Yates and was improved by Keikki Hyyrö and rewrite in python by Grégoire Prunier to be use in case of Tandem Repeat.
-It can be use to find Tandem repeats or CRISPR with addition of gap.
+It can be used to find Tandem repeats or CRISPR with possible addition of a gap.
 
-MaxRepv3 is a programme which can be use to find maximal repeat to help te get some motif to test with Tandem Repeat Detector
+MaxRepv3 is a programme which can be used to find maximal repeat which to get some pattern to test with Tandem Repeat Detector
 
 ## Note about the version
 
-This is the fifth version with lot of adds!
+This is the fifth version with a lot of adding!
 v1 - Simply implement the NFA algorithm
-v2 - Try to implement a detection of tamdem
-v3 - go back whith spacer from 1st version of Baeza-Yates
-v4 - Implementation of tandem repeat detection and pattern occurence count + parallelization of process (cut sequence in smaller pieces)
-v5 - spacer suppression and upgrade of diferent things
+v2 - Try to implement a detection of tandem
+v3 - go back with spacer from the 1st version of Baeza-Yates
+v4 - Implementation of tandem repeat detection and pattern occurrence count + parallel processes (cut sequence in smaller pieces)
+v5 - spacer suppression and upgrade different things
 
 ## Getting Started
 
-The program is contain in the python script NFA_TandemRepeat_detector_v5.py 
+The program is containes in the python script NFA_TandemRepeat_detector_v5.py 
 
-onelinedfasta.py is used to transforme a fasta file which sequence is write in multiple line. That put all the sequence in one line under the sequence ID.
+"onelinedfasta.py" is used to transform a fasta file in which the sequence is written in multiple line. That put all the sequence lines in one line under the sequence ID.
 
-The run.sh is used to find TR of a pattern gived in argument, in a simple fasta sequence or multifasta.
+The "run.sh" is used to find TR of a pattern given in argument, in a simple fasta sequence or multifasta.
 
 ### Prerequisites
 
 This algorithm need python 3  (tested with python 3.8.5)
-for use with pypy like with the run.sh, the package pypy is mandatory, and must be in stable version of python (python 3.7.9)
+for use with pypy like with the "run.sh", the package pypy is mandatory, and must be in a stable version of python (python 3.7.9)
 
-Packages required for TR Detector:
+Required Packages for TR Detector:
 
 * multiprocessing
 * getopt
@@ -49,13 +49,13 @@ python onelinedfasta.py --file downloadedsequence.fasta --out sequence_onelined.
 
 ## Use the algorithms
 ### Tandem Repeat Detector
-The program simply need to launch the python script and enter different arguments.
+The program simply needs to launch the python script and enter different arguments.
 
-* `--file` : Input sequence file (can contain multiple sequence). It need to be in Fasta format.
-* `--out` : The output name where are store results and informations about argument uses.
-* `--pattern` : The patern you want to search in sequences.
+* `--file` : Input sequence file (can contain multiple sequences). It is needed to be in Fasta format.
+* `--out` : The output name file in which are stored results and informations about used arguments.
+* `--pattern` : The pattern you want to search in sequences.
 * `--k` : The maximum number of errors allowed
-* `--gap` : size of gap between 2 occurence of motif (case of CRISPR for example)
+* `--gap` : size of th gap between 2 occurrences of the pattern (case of CRISPR for example)
 
 example of execution command line :
 ```
@@ -81,8 +81,8 @@ example of execution command line :
 
 Simply need to launch python script with different arguments :
 
-* `--file` : Input sequence file (can contain multiple sequence). It need to be in Fasta format.
-* `--out` : The output name where are store results and informations about argument uses.
+* `--file` : Input sequence file (can contain multiple sequences). It is needed to be in Fasta format (onelined).
+* `--out` : The output name file in which are stored results and informations about argument uses.
 * `--ml` : Minimal length of maximal repeats
 
 example of execution command line :
@@ -92,9 +92,9 @@ python --file Human_genome.fna --out output.out --ml 20
 
 ## Versioning
 
-This is th 5th version of the algorythm.
-It take a pattern and search all tandem repeats with this pattern. Each tandem repeat is repetition of the same pattern side to side.
-It take a k value of maximal error allowed in 1 pattern.
+This is the 5th version of the algorithm.
+It takes a pattern and search all tandem repeats with this pattern. Each tandem repeat is a repetition of the same pattern side to side.
+It takes a k value of maximal error allowed in 1 pattern.
 
 ## Authors
 
